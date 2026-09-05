@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Monoposto VR Mirror</string>
+    <string name="btn_grant_overlay">1. Grant Overlay Permission</string>
+    <string name="btn_start_vr">Start VR</string>
+    <string name="btn_stop_vr">Stop VR</string>
+    <string name="label_eye_sep">Eye Separation</string>
+    <string name="label_zoom">Zoom</string>
+    <string name="label_h_pos">Horizontal Position</string>
+    <string name="label_v_pos">Vertical Position</string>
+    <string name="label_barrel">Barrel / Lens Distortion</string>
+    <string name="notif_channel">VR Mirror Service</string>
+    <string name="notif_title">Monoposto VR Mirror running</string>
+    <string name="notif_text">Tap Stop to end VR mirroring</string>
+    <string name="notif_stop_action">STOP</string>
+</resources>
