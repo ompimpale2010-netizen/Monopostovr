@@ -16,6 +16,10 @@
 
     <uses-feature android:name="android.hardware.opengles.aep" android:required="false" />
 
+<queries>
+    <package android:name="com.gabama.monopostolite" />
+</queries>
+
     <application
         android:allowBackup="false"
         android:label="@string/app_name"
