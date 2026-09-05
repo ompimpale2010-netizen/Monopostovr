@@ -122,7 +122,10 @@ class CaptureService : Service() {
                 // Runs on the GL thread; hop back to main to touch MediaProjection safely.
                 mainHandler.post {
                     createVirtualDisplay(projection, captureSurface, width, height, density)
-                }
+val vrRenderer = VrRenderer(
+    captureWidth = width,
+    captureHeight = height,
+    settingsProvider = { settings },                }
             }
         )
         renderer = vrRenderer

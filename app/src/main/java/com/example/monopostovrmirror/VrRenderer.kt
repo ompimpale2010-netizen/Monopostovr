@@ -26,7 +26,12 @@ class VrRenderer(
     // Set by the GLSurfaceView owner so we can request a redraw when a new
     // camera/game frame arrives (RENDERMODE_WHEN_DIRTY keeps this efficient
     // on a mid-range phone instead of burning battery redrawing at max rate).
-    var glSurfaceView: GLSurfaceView? = null
+class VrRenderer(
+    private val captureWidth: Int,
+    private val captureHeight: Int,
+    private val settingsProvider: () -> VrSettings,
+    private val onCaptureSurfaceReady: (Surface) -> Unit
+) : GLSurfaceView.Renderer {    var glSurfaceView: GLSurfaceView? = null
 
     private var textureId = 0
     private lateinit var surfaceTexture: SurfaceTexture
@@ -105,6 +110,7 @@ class VrRenderer(
 
         textureId = createExternalOesTexture()
         surfaceTexture = SurfaceTexture(textureId)
+surfaceTexture.setDefaultBufferSize(captureWidth, captureHeight)surfaceTexture = SurfaceTexture(textureId)
         surfaceTexture.setOnFrameAvailableListener {
             synchronized(frameAvailableLock) { frameAvailable = true }
             glSurfaceView?.requestRender()
