@@ -154,7 +154,6 @@ class CaptureService : Service() {
             WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE or
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
                 WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
-                WindowManager.LayoutParams.FLAG_SECURE,
             PixelFormat.TRANSLUCENT
         )
         params.gravity = android.view.Gravity.TOP or android.view.Gravity.START
